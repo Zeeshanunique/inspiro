@@ -1,9 +1,14 @@
+// AdditionalRequirement.jsx
 import React from 'react'
+import { Textarea } from '@/components/ui/textarea'
 
-function AdditionalRequirement() {
+function AdditionalReq({ additionalRequirementInput }) { // Destructure the prop here
   return (
-    <div>AdditionalRequirement</div>
-  )
+    <div className='mt-5'>
+      <label className='text-gray-400'>Add Additional Requirements (Optional)</label>
+      <Textarea className='mt-2' onChange={(e) => additionalRequirementInput(e.target.value)} />
+    </div>
+  );
 }
 
-export default AdditionalRequirement
+export default AdditionalReq;
