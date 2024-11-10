@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/clerk-react";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import EmptyState from "./EmptyState";
 import Link from "next/link";
 import { db } from "@/config/db";
@@ -14,8 +14,11 @@ function Listing() {
   const [userRoomList, setUserRoomList] = useState([]);
 
   useEffect(() => {
-    user && GetUserRoomList();
+    if (user) {
+      GetUserRoomList();
+    }
   }, [user]);
+  
 
   const GetUserRoomList = async () => {
     const result = await db

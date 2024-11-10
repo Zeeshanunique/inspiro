@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Wand2, Sparkles, Clock, CreditCard } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   const features = [
@@ -36,7 +37,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative h-[600px] flex items-center justify-center bg-gray-900">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/api/placeholder/1920/600"
             alt="Room Design Background"
             className="object-cover w-full h-full brightness-50"

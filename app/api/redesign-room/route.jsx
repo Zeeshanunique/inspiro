@@ -5,7 +5,7 @@ import { ref, uploadString, getDownloadURL } from "firebase/storage";
 import { storage } from "@/config/firebaseConfig";
 import { db } from "@/config/db";
 import { AiGeneratedImages } from "@/config/schema";
-import { useUser } from "@clerk/nextjs";
+
 
 const replicate = new Replicate({
   auth: process.env.NEXT_PUBLIC_REPLICATE_API_TOKEN,

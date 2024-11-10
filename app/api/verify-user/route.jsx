@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import {db} from "@/config/db";
 import {Users} from "@/config/schema";
 import {eq} from "drizzle-orm";
-import { userInfo } from "os";
+
 
 export async function POST(req){
     const {user}=await req.json();
