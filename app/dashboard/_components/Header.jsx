@@ -4,6 +4,7 @@ import React,{useContext} from "react";
 import {UserButton} from "@clerk/clerk-react";
 import UserDetailContext from "@/app/_context/UserDetailContext";
 import { Button } from "@/components/ui/button";
+import BuyCredits from "../buy-credits/page";
 
 function Header() {
     const {userDetail, setUserDetail} = useContext(UserDetailContext);
@@ -14,7 +15,7 @@ function Header() {
         <h2 className="font-bold text-lg">AI Room Design</h2>
       </div>
 
-      <Button variant="ghost" className="rounded-full text-primary">Buy More Credits</Button>
+      <Button variant="ghost" className="rounded-full text-primary" onClick={BuyCredits}>Buy More Credits</Button>
       <div className="flex gap-7 items-center" >
         <div className="flex gap-2 p-1 items-center bg-slate-200 px-3 rounded-full">
             <Image alt='' src={'/star.png'} width={20} height={20}/>
