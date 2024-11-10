@@ -38,9 +38,11 @@ export default function Home() {
       <div className="relative h-[600px] flex items-center justify-center bg-gray-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/api/placeholder/1920/600"
+            src="/interface.jpg"
             alt="Room Design Background"
             className="object-cover w-full h-full brightness-50"
+            width={1920}
+            height={600}
           />
         </div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
