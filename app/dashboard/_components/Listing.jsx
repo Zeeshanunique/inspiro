@@ -7,7 +7,8 @@ import Link from "next/link";
 import { db } from "@/config/db";
 import { AiGeneratedImages } from "@/config/schema";
 import { eq } from "drizzle-orm";
-import RoomDesignCard from "../create-new/_components/RoomDesignCard";
+// import RoomDesignCard from "../create-new/_components/RoomDesignCard";
+import RoomDesignCardDash from "./RoomDesignCardDash";
 
 function Listing() {
   const { user } = useUser();
@@ -48,7 +49,7 @@ function Listing() {
           {/* Listing*/}
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {userRoomList.map((room, index) => (
-              <RoomDesignCard key={index} room={room} />
+              <RoomDesignCardDash key={index} room={room} />
             ))}
             
           </div>
